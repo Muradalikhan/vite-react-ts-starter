@@ -1,4 +1,4 @@
-<h1 align='center'>PRA chat app</h1>
+<h1 align='center'>Project Name</h1>
 
  Node Version
 
