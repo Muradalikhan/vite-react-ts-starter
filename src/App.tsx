@@ -1,13 +1,7 @@
-import Hello from '~/components/Hello/Hello'
-import Button from '~/components/Button/Button'
+import Dashboard from './screens/Dashboard'
 
 const App = () => {
-  return (
-    <div className='app'>
-      <Hello />
-      <Button type='primary'>Click me</Button>
-    </div>
-  )
+  return <Dashboard />
 }
 
 export default App
