@@ -1,7 +1,7 @@
-import { Typography } from 'antd'
+import { Typography } from '@mui/material'
 
 const Hello = () => {
-  return <Typography.Title level={1}>Hello world</Typography.Title>
+  return <Typography variant='h3'>Hello world</Typography>
 }
 
 export default Hello

@@ -1,22 +1,10 @@
-import { Button as AntButton, ButtonProps, theme } from 'antd'
+import { Button as MuiButton, ButtonProps } from '@mui/material'
 
-const Button = ({ children, style, ...rest }: ButtonProps): ReactNode => {
-  const { useToken } = theme
-  const {
-    token: { borderRadius, controlHeightLG }
-  } = useToken()
+const Button = ({ children, ...rest }: ButtonProps): ReactNode => {
   return (
-    <AntButton
-      size='large'
-      style={{
-        borderRadius: borderRadius,
-        height: controlHeightLG,
-        ...style
-      }}
-      {...rest}
-    >
+    <MuiButton size='large' {...rest}>
       {children}
-    </AntButton>
+    </MuiButton>
   )
 }
 
