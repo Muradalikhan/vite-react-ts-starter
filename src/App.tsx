@@ -1,13 +1,17 @@
-import Hello from '~/components/Hello/Hello'
-import Button from '~/components/Button/Button'
+import { EditorState } from 'draft-js'
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
+import RichTextEditor from './RichTextEditor/RichTextEditor'
+import { SetStateAction, useState } from 'react'
 
 const App = () => {
-  return (
-    <div className='app'>
-      <Hello />
-      <Button type='primary'>Click me</Button>
-    </div>
-  )
+  const [editorState, setEditorState] = useState(() => EditorState.createEmpty())
+
+  const handleEditorChange = (state: SetStateAction<EditorState>): void => {
+    setEditorState(state)
+    // convertContentToHTML()
+  }
+
+  return <RichTextEditor editorState={editorState} onEditorStateChange={handleEditorChange} />
 }
 
 export default App
