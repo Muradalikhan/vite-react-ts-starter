@@ -1,4 +1,4 @@
-<h1 align='center'>Mui Start kit with Dashboard page and Light dark theme feature</h1>
+<h1 align='center'>React Antd Start Kit with vite</h1>
 
  Node Version
 

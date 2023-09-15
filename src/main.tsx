@@ -2,14 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './styles/global.css'
-import CssBaseline from '@mui/material/CssBaseline'
-import ThemeContext from './context/ThemeContext'
+import { ConfigProvider } from 'antd'
+import theme from './theme.json'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeContext>
-      <CssBaseline />
+    <ConfigProvider theme={theme}>
       <App />
-    </ThemeContext>
+    </ConfigProvider>
   </React.StrictMode>
 )
